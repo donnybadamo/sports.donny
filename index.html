@@ -27,7 +27,25 @@
             background-color: var(--primary-color);
             color: white;
             padding: 1rem;
+        }
+        .header-container {
+            position: relative;
             text-align: center;
+        }
+        .home-link {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .home-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            transition: transform 0.2s;
+        }
+        .home-icon:hover {
+            transform: scale(1.2);
         }
         .site-title { font-size: 2rem; font-weight: 700; margin: 0; }
         .tagline { font-style: italic; margin-top: 0.5rem; }
@@ -79,14 +97,13 @@
             flex: 2;
         }
         .series-gif {
-            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 1.5rem 0;
         }
         .series-gif .tenor-gif-embed {
-            width: 100%;
-            max-width: 200px;
+            width: 230px; /* Original was 200px, increased by 15% */
         }
         .team-comparison {
             display: flex;
@@ -120,8 +137,15 @@
 </head>
 <body>
     <header>
-        <h1 class="site-title">DONNY BADAMO SPORTS</h1>
-        <p class="tagline">Your Detroit Basketball Headquarters</p>
+        <div class="header-container">
+            <a href="https://donnybadamo.com" class="home-link">
+                <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                    <path d="M12 2L1 12h3v9h6v-6h4v6h6v-9h3L12 2z"/>
+                </svg>
+            </a>
+            <h1 class="site-title">DONNY BADAMO SPORTS</h1>
+            <p class="tagline">Your Detroit Basketball Headquarters</p>
+        </div>
     </header>
 
     <main>
@@ -134,18 +158,20 @@
             </div>
         </div>
 
+        <!-- GIF moved above the series breakdown text -->
+        <div class="series-gif">
+            <div class="tenor-gif-embed" data-postid="2770431781672197712" data-share-method="host" data-aspect-ratio="0.813253" data-width="230">
+                <a href="https://tenor.com/view/cade-cunningham-detroit-pistons-nba-him-gif-2770431781672197712">Cade Cunningham Detroit Pistons GIF</a> from 
+                <a href="https://tenor.com/search/cade+cunningham-gifs">Cade Cunningham GIFs</a>
+            </div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+
         <div class="series-info">
             <div class="series-text">
                 <h2>First Round Series Breakdown</h2>
-                <p>New York managed to squeak out a Game 1 win largely due to Detroit’s cold shooting night — nothing sustainable. Cade responded in Game 2 by bulldozing their defense, dropping dimes like he moonlights as a Fed. Tied 1-1, momentum now fully belongs to Detroit as we return to the D for what’s shaping up to be a massacre at LCA.</p>
-                <p style="font-weight: bold; font-style: italic; color: var(--secondary-color); text-align: center; margin-top: 2rem;">If this series gets any more unhinged, we’ll need a seatbelt law for playoff basketball. And yes, that was Isaiah Livers crowd-surfing in Section 112.</p>
-            </div>
-            <div class="series-gif">
-                <div class="tenor-gif-embed" data-postid="2770431781672197712" data-share-method="host" data-aspect-ratio="0.813253" data-width="200">
-                    <a href="https://tenor.com/view/cade-cunningham-detroit-pistons-nba-him-gif-2770431781672197712">Cade Cunningham Detroit Pistons GIF</a> from 
-                    <a href="https://tenor.com/search/cade+cunningham-gifs">Cade Cunningham GIFs</a>
-                </div>
-                <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                <p>New York managed to squeak out a Game 1 win largely due to Detroit's cold shooting night — nothing sustainable. Cade responded in Game 2 by bulldozing their defense, dropping dimes like he moonlights as a Fed. Tied 1-1, momentum now fully belongs to Detroit as we return to the D for what's shaping up to be a massacre at LCA.</p>
+                <p style="font-weight: bold; font-style: italic; color: var(--secondary-color); text-align: center; margin-top: 2rem;">If this series gets any more unhinged, we'll need a seatbelt law for playoff basketball. And yes, that was Isaiah Livers crowd-surfing in Section 112.</p>
             </div>
         </div>
 
@@ -155,7 +181,7 @@
                 <p><strong>Record:</strong> 44-38 (6th Seed)</p>
                 <p><strong>Key Players:</strong> Cade Cunningham (assassin, goat), Jalen Duren (glass cleaner), Malik Beasley (actual 6th man)</p>
                 <p><strong>Strengths:</strong> Controlled chaos. Cade dictates tempo, defense swarms, and every rebound is a declaration of war. Team is growing fangs in real time.</p>
-                <p><strong>Playoff Experience:</strong> New core, new culture. Nobody’s scared — they’re the problem now.</p>
+                <p><strong>Playoff Experience:</strong> New core, new culture. Nobody's scared — they're the problem now.</p>
             </div>
 
             <div class="team knicks">
@@ -163,14 +189,14 @@
                 <p><strong>Record:</strong> Record: 52-30 (3rd Seed)</p>
                 <p><strong>Key Players:</strong> Jalen Brunson (flopper), Karl Anthony Towns (kitty cat), OG Anunonby (pretty good defender, ngl)</p>
                 <p><strong>Strengths:</strong> Thibs only players starters, but they aren't even as good as the Piston's bench. The (alleged) rotations made them gassed in Game 2. Lacked adjustments when Cade turned up the heat.</p>
-                <p><strong>Playoff Experience:</strong> Familiar faces, same playoff cap. They’ve been here — and lost here — before.</p>
+                <p><strong>Playoff Experience:</strong> Familiar faces, same playoff cap. They've been here — and lost here — before.</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Donny Badamo Sports | All Rights Reserved</p>
-        <p>sports.donnybadamo.com</p>
+        <p>&copy; 2025 Donny Badamo Sports | Some Rights Reserved, I Think</p>
+        <p><a href="https://donnybadamo.com" style="color: white; text-decoration: underline;">donnybadamo.com</a></p>
     </footer>
 </body>
 </html>
