@@ -41,15 +41,6 @@
             flex-direction: column;
             align-items: center;
         }
-        .featured-image-container {
-            width: 100%;
-            max-width: 900px;
-            text-align: center;
-            box-shadow: 0 0 20px var(--shadow-color);
-            border: 5px solid var(--primary-color);
-            border-radius: 5px;
-            overflow: hidden;
-        }
         .image-caption {
             background-color: rgba(29, 66, 138, 0.8);
             color: white;
@@ -74,11 +65,28 @@
             margin-top: 2rem;
             box-shadow: 0 0 10px var(--shadow-color);
             border-left: 5px solid var(--secondary-color);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
         }
         .series-info h2 {
             color: var(--primary-color);
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 0.5rem;
+        }
+        .series-text {
+            flex: 2;
+        }
+        .series-gif {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .series-gif .tenor-gif-embed {
+            width: 100%;
+            max-width: 200px;
         }
         .team-comparison {
             display: flex;
@@ -121,24 +129,24 @@
             <h1 style="text-align: center; color: var(--primary-color);">DETROIT vs KNICKS</h1>
             <h2 style="text-align: center; color: var(--secondary-color); margin-top: -0.5rem;">2025 NBA PLAYOFFS - FIRST ROUND</h2>
 
-            <div class="featured-image-container">
-                <div class="tenor-gif-embed" data-postid="2770431781672197712" data-share-method="host" data-aspect-ratio="0.813253" data-width="60%">
-                    <a href="https://tenor.com/view/cade-cunningham-detroit-pistons-nba-him-gif-2770431781672197712">Cade Cunningham Detroit Pistons GIF</a> from 
-                    <a href="https://tenor.com/search/cade+cunningham-gifs">Cade Cunningham GIFs</a>
-                </div>
-                <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-                <div class="image-caption">THE FINAL DISS — CADE AIN’T HEAR NO BELL</div>
-            </div>
-
             <div class="countdown">
                 GAME 3: THE CAULDRON BOILS — TOMORROW NIGHT AT LITTLE CAESARS ARENA, 7:30PM ET
             </div>
         </div>
 
         <div class="series-info">
-            <h2>First Round Series Breakdown</h2>
-            <p>New York managed to squeak out a Game 1 win largely due to Detroit’s cold shooting night — nothing sustainable. Cade responded in Game 2 by bulldozing their defense, dropping dimes like he moonlights as a Fed. Tied 1-1, momentum now fully belongs to Detroit as we return to the D for what’s shaping up to be a massacre at LCA.</p>
-            <p style="font-weight: bold; font-style: italic; color: var(--secondary-color); text-align: center; margin-top: 2rem;">If this series gets any more unhinged, we’ll need a seatbelt law for playoff basketball. And yes, that was Isaiah Livers crowd-surfing in Section 112.</p>
+            <div class="series-text">
+                <h2>First Round Series Breakdown</h2>
+                <p>New York managed to squeak out a Game 1 win largely due to Detroit’s cold shooting night — nothing sustainable. Cade responded in Game 2 by bulldozing their defense, dropping dimes like he moonlights as a Fed. Tied 1-1, momentum now fully belongs to Detroit as we return to the D for what’s shaping up to be a massacre at LCA.</p>
+                <p style="font-weight: bold; font-style: italic; color: var(--secondary-color); text-align: center; margin-top: 2rem;">If this series gets any more unhinged, we’ll need a seatbelt law for playoff basketball. And yes, that was Isaiah Livers crowd-surfing in Section 112.</p>
+            </div>
+            <div class="series-gif">
+                <div class="tenor-gif-embed" data-postid="2770431781672197712" data-share-method="host" data-aspect-ratio="0.813253" data-width="200">
+                    <a href="https://tenor.com/view/cade-cunningham-detroit-pistons-nba-him-gif-2770431781672197712">Cade Cunningham Detroit Pistons GIF</a> from 
+                    <a href="https://tenor.com/search/cade+cunningham-gifs">Cade Cunningham GIFs</a>
+                </div>
+                <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            </div>
         </div>
 
         <div class="team-comparison">
